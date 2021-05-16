@@ -1,2 +1,2 @@
 # JavaFullStackProfile
-This repository contains a full stack java application with Angular and mongodb .
+This repository contains a full stack springboot application with Angular and mongodb .
