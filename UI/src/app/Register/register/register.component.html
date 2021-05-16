@@ -1,0 +1,23 @@
+     
+<div class="container" style="width: 50%;">
+  <form (ngSubmit)="onClickSubmit(userSignUp.value)" #userSignUp = "ngForm">
+    <div class="form-group">
+      <label for="InputEmail">Email address</label>
+      <input type="email" class="form-control" id="InputEmail" name="email"  placeholder="Enter Email" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="InputMobile">Mobile No.</label>
+      <input type="number" class="form-control" id="InputMobile" name="mobile"  placeholder="Enter Mobile" ngModel>
+  
+    </div>
+    <div class="form-group">
+      <label for="InputPassword">Password</label>
+      <input type="password" class="form-control" id="InputPassword" name="password"  placeholder="Password" ngModel>
+    </div>
+    <!-- <input type="submit" class="btn btn-primary" value="SignUp"> -->
+    <button class="btn btn-primary" type="submit" >SignUp</button>&nbsp;
+    <button class="btn btn-primary" type="reset" >Reset</button>
+    <a [routerLink]='["/login"]' routerLinkActive="active"> Already have an Account ? Click Here</a>
+  </form>
+  <router-outlet></router-outlet>  
+</div>
