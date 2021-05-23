@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// import {MatIconModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { GlobalService } from './global.service';
@@ -19,7 +19,8 @@ import { RegisterComponent } from './Register/register/register.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule 
+    // MatIconModule
   ],
   providers: [GlobalService],
   bootstrap: [AppComponent]

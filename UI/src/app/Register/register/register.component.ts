@@ -13,8 +13,8 @@ export class RegisterComponent implements OnInit {
   constructor(private globalService: GlobalService, private router: Router) { }
 
   onClickSubmit(user) {
-    this.globalService.addUser(user);
-    console.log("Form Data", user.email, user.password, user.mobile);
+    this.globalService.addUser(user).subscribe();
+    console.log("Form Data 1", user.email, user.password, user.mobile);
  }
 
   ngOnInit() {

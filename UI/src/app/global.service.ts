@@ -12,7 +12,7 @@ export class GlobalService {
   constructor(private http: HttpClient) { }
   addUser(user: User): Observable<User> {
     const options = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<User>('http://localhost:4200/addUser', user, { headers: options })
+    return this.http.post<User>('http://localhost:8081/register', user, { headers: options })
     .pipe(catchError(this.handleError));
   }
   private handleError(err: HttpErrorResponse) {
