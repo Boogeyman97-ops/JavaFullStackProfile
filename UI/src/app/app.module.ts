@@ -8,13 +8,17 @@ import { LoginComponent } from './Login/login/login.component';
 import { AppRoutingModule } from './app.routing.module';
 import { RegisterComponent } from './Register/register/register.component';
 import { MatIconModule } from '@angular/material';
+import { PortfolioComponent } from './portfolio/portfolio/portfolio.component';
+import { AdminComponent } from './admin/admin/admin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PortfolioComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

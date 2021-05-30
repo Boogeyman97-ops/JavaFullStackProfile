@@ -8,7 +8,7 @@ import { GlobalService } from 'src/app/global.service';
   styleUrls: ['./register.component.css'],
   providers: [GlobalService]
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent{
 
   constructor(private globalService: GlobalService, private router: Router) { }
 
@@ -16,9 +16,4 @@ export class RegisterComponent implements OnInit {
     this.globalService.addUser(user).subscribe();
     console.log("Form Data 1", user.email, user.password, user.mobile);
  }
-
-  ngOnInit() {
-    
-  }
-
 }

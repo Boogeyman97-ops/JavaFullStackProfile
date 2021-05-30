@@ -15,6 +15,11 @@ export class GlobalService {
     return this.http.post<User>('http://localhost:8081/register', user, { headers: options })
     .pipe(catchError(this.handleError));
   }
+  authenticateUser(user): Observable<User> {
+    const options = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post<User>('http://localhost:8081/authenticate', user, { headers: options })
+    .pipe(catchError(this.handleError));
+  }
   private handleError(err: HttpErrorResponse) {
     let errMsg = '';
     if (err.error instanceof Error) {

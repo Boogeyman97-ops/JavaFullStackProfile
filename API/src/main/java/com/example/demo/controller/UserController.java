@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
 
+import java.util.ArrayList;
+
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +32,8 @@ public class UserController {
     }
 
     @PostMapping(path="/authenticate", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public HttpStatus authenticate(@RequestBody String user){
-        Boolean value = userRepo.findById(user).isPresent();
-        if(value){
+    public HttpStatus authenticate(@RequestBody User user){
+        if(userRepo.findById(user.getEmail()).isPresent()){
             return HttpStatus.OK;
         }
         else{
