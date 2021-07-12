@@ -10,6 +10,9 @@ import { RegisterComponent } from './Register/register/register.component';
 import { MatIconModule } from '@angular/material';
 import { PortfolioComponent } from './portfolio/portfolio/portfolio.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductTemplateComponent } from './template/product-template/product-template.component';
+import { AwsInfraComponent } from './widgets/aws-infra/aws-infra.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { AdminComponent } from './admin/admin/admin.component';
     LoginComponent,
     RegisterComponent,
     PortfolioComponent,
-    AdminComponent
+    AdminComponent,
+    ProductsComponent,
+    ProductTemplateComponent,
+    AwsInfraComponent
   ],
   imports: [
     BrowserModule,
